@@ -45,16 +45,15 @@ class OpenPose():
 
 @app.route('/')
 def render_file():
-   return render_template('upload.html')
+   return render_template('main.html')
 
-@app.route('/fileUpload', methods = ['GET', 'POST'])
-def upload_file():
+@app.route('/model', methods = ['GET', 'POST'])
+def model():
    if request.method == 'POST':
       f = request.files['file']
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
 
-      flist = list()
       pose = OpenPose(modelpt)
       arr = []
       temp_peaks = []
@@ -118,7 +117,8 @@ def upload_file():
                  "호수",
                  "일몰", "일출", "적중하다", "정말"]
 
-      return '해당 영상은 ' + CLASSES[label] + ' 입니다.'
+      #return '해당 영상은 ' + CLASSES[label] + ' 입니다.'
+      return render_template('result.html', label=CLASSES[label])
 
 
 if __name__ == '__main__':
