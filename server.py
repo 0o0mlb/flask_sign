@@ -110,7 +110,7 @@ def model():
                  "피곤", "시작", "충격", "조용하다", "상상", "예견", "난감하다", "알려주다", "잊어버리다", "깜빡하다", "결코", "제법", "뜻밖", "격노", "짜증내다", "강물", "달", "뜨겁다", "별", "호수", "일몰", "일출", "적중하다", "정말"]
 
       #return '해당 영상은 ' + CLASSES[label] + ' 입니다.'
-      return render_template('result.html', label=CLASSES[label])
+      return render_template('result.html', label=CLASSES[label], filename=f.filename)
 
 
 if __name__ == '__main__':
