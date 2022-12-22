@@ -1,3 +1,13 @@
 # flask_sign
 
-python 3.8
+Create a python 3.8 environment 
+
+Environment setting:
+'''
+pip install -r requirements.txt
+'''
+
+Run:
+'''
+python server.py
+'''
