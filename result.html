@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor = #e6e6ff>
+    <h2>pytorch-openpose를 활용한 수어 번역 시스템입니다.</h2>
+    <a href="https://github.com/Hzzone/pytorch-openpose">pytorch-openpose 바로가기</a>
+    <br><h2> 제출한 영상은 {{label}} 입니다. </h2>
+    <video width="480px" height="270px"
+           controls="controls" autoplay="autoplay"
+           name="media" muted="muted"loop="loop" preload="preload">
+    <source src="./{{filename}}" type="video/mp4">
+  </video>
+<script>
+    document.getElementById('vid').play();
+</script>
+</body>
+</html>
